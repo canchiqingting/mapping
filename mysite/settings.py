@@ -80,7 +80,7 @@ DATABASES = {
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': 'root',
         'PASSWORD': 'qw1990',
-        'NAME': 'wordpress',
+        'NAME': 'mapping',
         'HOST': '127.0.0.1',
     }
 }
