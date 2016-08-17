@@ -9,7 +9,7 @@ def index(request):
 #	fruit.password = "qw1990"
 	fruit.save()
 	dict["username"] = "qfgao"
-	p = Person.objects.filter(username = "qfgao")
+	p = Person.objects.filter(pk=1)
 	dict["password"] = p.password
 	m_json = json.dumps(dict)
 	return HttpResponse(m_json)
