@@ -6,9 +6,13 @@ def index(request):
 #	info = 'Json success'
 #	if request.method == 'POST':
 #		req = simplejson.loads(request.raw_post_data)
-#		username = request.GET.get('username') 
+#		username = request.GET.getet('username') 
 	#	info = request.raw_post_data
-	dict["username"] = "username"
-	dict["password"] = "password"
+	fruit = Person.object.create()
+	fruit.username = "qfgao"
+	fruit.password = "qw1990"
+	fruit.save()
+	dict["username"] = "qfgao"
+	dict["password"] = fruit.object.filter(username = 'qfgao').password
 	m_json = json.dumps(dict)
 	return HttpResponse(m_json)
